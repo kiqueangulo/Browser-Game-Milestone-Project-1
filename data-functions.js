@@ -5,14 +5,21 @@ async function getWord() {
 };
 
 // This will return an array of rhymes from a given word
-async function getRhymes(word) {    
-    let response = await fetch(`https://api.datamuse.com/words?rel_rhy=${word}`).then(obj => obj.json());
-    return response;
+async function getRhymes(word) {
+    let response = await fetch(`https://wordsapiv1.p.rapidapi.com/words/${word}/rhymes`, {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com',
+            'X-RapidAPI-Key': '56061a3ad2mshd3bab4d346d11cfp150325jsn2c8650949247'
+        }
+    }).then(obj => obj.json());
+
+    return response.rhymes;
 };
 
 async function rhymes() {
     let word = await getWord();
-    let rhymes = await getRhymes(word);
+    let rhymes = await getRhymes('wind');
     
     // Ignore words with no rhymes in the api
     while (Object.keys(rhymes).length === 0) {
@@ -20,8 +27,5 @@ async function rhymes() {
         rhymes = await getRhymes(word);
     };
 
-    console.log(word);
-    console.log(rhymes);
+    return [word, rhymes];
 };
-
-rhymes();
