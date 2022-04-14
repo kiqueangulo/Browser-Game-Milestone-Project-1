@@ -17,9 +17,9 @@ async function getRhymes(word) {
     return response.rhymes;
 };
 
-async function rhymes() {
+async function getData() {
     let word = await getWord();
-    let rhymes = await getRhymes('wind');
+    let rhymes = await getRhymes(word);
     
     // Ignore words with no rhymes in the api
     while (Object.keys(rhymes).length === 0) {

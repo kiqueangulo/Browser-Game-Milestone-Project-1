@@ -6,9 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Name</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./data-functions.js"></script>
+    <script src="./data.js"></script>
+    <script src="./start.js"></script>
 </head>
 <body>
-
+    <nav id="nav"></nav>
+    <div class="general input-side">
+        <div class="container left">
+            <div id="word-info">
+                <p id="word-shown">WORD</p>
+                <span>ICON</span>
+            </div>
+            <div id="user-input">
+                <input type="text" id="typed-input">
+                <button id="try-bttn">TRY</button>
+            </div>
+            <div id="lives"></div>
+        </div>
+    </div>
+    <div class="general hidden-side">
+        <div class="container right"></div>
+    </div>
 </body>
 </html>
