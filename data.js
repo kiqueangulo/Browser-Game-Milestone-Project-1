@@ -1,6 +1,7 @@
 // This will return a ramdon word
 async function getWord() {
     let response = await fetch(`https://random-word-api.herokuapp.com/word`).then(arr => arr.json());
+    // let response = await fetch(`https://most-common-words.herokuapp.com/api/search?top=20`).then(obj => obj.json());
     return response
 };
 

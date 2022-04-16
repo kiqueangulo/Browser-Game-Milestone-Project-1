@@ -18,6 +18,7 @@ async function start() {
     function loadData(arr) {
         shown.textContent = word; // User's guide word
 
+        deleteSameWord(word, arr);
         removeSpaces(arr);
         shuffle(arr);
         
@@ -29,40 +30,15 @@ async function start() {
             let divOut = document.createElement('div');
             let divIn = document.createElement('div');
             
-            letters[i].forEach(letter => {
+            for (let j = 0; j < letters[i].length; j++) {
                 let span = document.createElement('span');
-                span.textContent = letter;
+                span.textContent = letters[i][j];
                 divIn.appendChild(span);
-            });
+            };
 
             divOut.appendChild(divIn);
             rightContainer.appendChild(divOut);
         };
-    };
-
-    // This removes elements with more than one word, but it doesn't work very well
-    function removeSpaces(arr) {
-        let byWords = arr.map(str => str.split(' '));
-        
-        for (let i = 0; i < byWords.length; i++) {
-            if (byWords[i].length > 1) {
-                byWords.splice(i, 1);
-            }
-        }
-        return byWords;
-    };
-    
-    // Randomize the array with the Fisher-Yates Shuffle, so the words are not loaded in the same order everytime
-    function shuffle(arr) {
-        let current = arr.length,  random;
-        
-        while (current != 0) {
-            random = Math.floor(Math.random() * current);
-            current--;
-      
-            [arr[current], arr[random]] = [arr[random], arr[current]];
-        }
-        return arr;
     };
 };
 
