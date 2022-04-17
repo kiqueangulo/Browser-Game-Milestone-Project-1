@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Name</title>
+    <script src="https://kit.fontawesome.com/af9596bd1f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./game.css">
     <script src="./functions.js"></script>
     <script src="./start.js"></script>
@@ -18,21 +19,21 @@
             <li>STATS</li>
         </ul>
     </nav>
-    <div class="general input-side">
-        <div class="container left">
+    <div id="play-zone">
+        <div class="container input-side">
             <div id="word-info">
                 <p id="word-shown">WORD</p>
-                <span>ICON</span>
+                <span><i class="fa-solid fa-circle-info"></i></span>
             </div>
             <div id="user-input">
                 <input type="text" id="typed-input">
                 <button id="try-bttn">TRY</button>
             </div>
-            <div id="lives"></div>
+            <div id="lives">
+                <i class="fa-solid fa-heart"></i>
+            </div>
         </div>
-    </div>
-    <div class="general hidden-side">
-        <div class="container right"></div>
+        <div class="container hidden-side"></div>
     </div>
 </body>
 </html>

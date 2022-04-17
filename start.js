@@ -1,7 +1,7 @@
 async function start() {
     let [word, rhymes] = await randomData();
     let shown = document.getElementById('word-shown');
-    let rightContainer = document.querySelector('.right');
+    let hiddenSide = document.querySelector('.hidden-side');
     
     loadData(rhymes);
     
@@ -29,7 +29,7 @@ async function start() {
             };
 
             divOut.appendChild(divIn);
-            rightContainer.appendChild(divOut);
+            hiddenSide.appendChild(divOut);
         };
     };
 };
