@@ -1,23 +1,29 @@
-// In case the selected word is also in the array of rhymes
-function deleteSameWord(word, wordsArr) {
-    for (i = 0; i < wordsArr.length; i++) {
-        if (wordsArr[i] === word) {
-            wordsArr.splice(i, 1);
-        };
-    };
+// When the player just hit PLAY
+async function randomData() {
+    let response = await fetch('dataBase.json').then(obj => obj.json());
+    let data = response.words[Math.floor(Math.random() * response.words.length)];
     
-    return wordsArr;
+    let word = data.word;
+    let rhymes = data.level1;
+    
+
+    return [word, rhymes];
 };
 
-// This removes elements with more than one word, but it doesn't work very well
-function removeSpaces(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i].split(' ').length > 1) {
-            arr.splice(i, 1);
+// If the player chooses a specific word
+async function specificData(par) {
+    let word;
+    let rhymes = [];
+    let response = await fetch('dataBase.json').then(obj => obj.json());
+
+    for (let i = 0; i < response.words.length; i++) {
+        if (response.words[i].word === par) {
+            word = response.words[i].word;
+            rhymes = response.words[i].level1;
         };
     };
 
-    return arr;
+    return [word, rhymes];
 };
 
 // Randomize the array with the Fisher-Yates Shuffle, so the words are not loaded in the same order everytime

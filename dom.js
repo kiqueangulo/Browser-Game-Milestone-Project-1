@@ -1,0 +1,1 @@
+let playBttn = document.querySelector('.play');

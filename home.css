@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+#container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    min-height: 50%;
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.option-container {
+    display: flex;
+    flex-grow: 3;
+    justify-content: center;
+    align-items: center;
+}
+.one {
+    margin-top: 1rem;
+}
+.three {
+    flex-grow: 1;
+}
+.click {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Fredoka Ona', cursive;
+    padding: 1.5rem 2rem;
+}
+.click, .icon {
+    color: hsl(0, 100, 0);
+    border: 1px solid black;
+}
+.play{
+    text-decoration: none;
+}
+.icon {
+    padding: 0.5rem 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

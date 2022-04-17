@@ -1,0 +1,172 @@
+{
+    "words": [
+        {
+            "word": "they",
+            "type": "pronoun",
+            "definition": "Used to refer to two or more people or things previously mentioned or easily identified.",
+            "level1": [
+                {
+                    "word": "bay",
+                    "type": "noun",
+                    "definition": "A broad inlet of the sea where the land curves inward."
+                },
+                {
+                    "word": "display",
+                    "type": "verb",
+                    "definition": "Make a prominent exhibition of (something) in a place where it can be easily seen."
+                },
+                {
+                    "word": "clay",
+                    "type": "noun",
+                    "definition": "A very fine-grained soil that is plastic when moist but hard when fired."
+                },
+                {
+                    "word": "day",
+                    "type": "noun",
+                    "definition": "Time for Earth to make a complete rotation on its axis."
+                },
+                {
+                    "word": "convey",
+                    "type": "verb",
+                    "definition": "Transport or carry to a place."
+                }
+            ],
+            "level2": [
+                {
+                    "word": "Monterey",
+                    "type": "noun",
+                    "definition": "A town in western California to the south of San Francisco."
+                },
+                {
+                    "word": "bouvier",
+                    "type": "noun",
+                    "definition": "A large, powerful dog of a rough-coated breed originating in Belgium."
+                },
+                {
+                    "word": "essay",
+                    "type": "noun",
+                    "definition": "An analytic or interpretive literary composition."
+                }
+            ],
+            "level3": [
+                {
+                    "word": "HA",
+                    "type": "noun",
+                    "definition": "(Astronomy), the angular distance of a celestial point measured westward along the celestial equator from the zenith crossing; the right ascension for an observer at a particular location and time of day."
+                }
+            ]
+        },
+        {
+            "word": "picture",
+            "type": "verb",
+            "definition": "Represent (someone or something) in a photograph or picture.",
+            "level1": [
+                {
+                    "word": "scripture",
+                    "type": "noun",
+                    "definition": "Any writing that is regarded as sacred by a religious group."
+                },
+                {
+                    "word": "mixture",
+                    "type": "noun",
+                    "definition": "A collection containing a variety of sorts of things."
+                },
+                {
+                    "word": "pitcher",
+                    "type": "noun",
+                    "definition": "The position on a baseball team of the player who throws the ball for a batter to try to hit."
+                },
+                {
+                    "word": "switcher",
+                    "type": "noun",
+                    "definition": "A person who administers punishment by wielding a switch or whip."
+                },
+                {
+                    "word": "lecture",
+                    "type": "noun",
+                    "definition": "Teaching by giving a discourse on some subject (typically to a class)."
+                }
+            ],
+            "level2": [
+                {
+                    "word": "descriptor",
+                    "type": "noun",
+                    "definition": "The phonological or orthographic sound or appearance of a word that can be used to describe or identify something."
+                },
+                {
+                    "word": "stricture",
+                    "type": "noun",
+                    "definition": "A restriction on a person or activity."
+                },
+                {
+                    "word": "disfigure",
+                    "type": "verb",
+                    "definition": "Mar or spoil the appearance of."
+                }
+            ],
+            "level3": [
+                {
+                    "word": "tincture",
+                    "type": "verb",
+                    "definition": "Be tinged, flavored, or imbued with a slight amount of."
+                }
+            ]
+        },
+        {
+            "word": "thing",
+            "type": "noun",
+            "definition": "An object that one need not, cannot, or does not wish to give a specific name to.",
+            "level1": [
+                {
+                    "word": "thin",
+                    "type": "adj",
+                    "definition": "Having opposite surfaces or sides close together."
+                },
+                {
+                    "word": "been",
+                    "type": "verb",
+                    "definition": "Remote past usage of be."
+                },
+                {
+                    "word": "green",
+                    "type": "noun",
+                    "definition": "Resembling the color of growing grass."
+                },
+                {
+                    "word": "bean",
+                    "type": "noun",
+                    "definition": "An edible seed, typically kidney-shaped, growing in long pods on certain leguminous plants."
+                },
+                {
+                    "word": "spin",
+                    "type": "noun",
+                    "definition": "A swift whirling motion (usually of a missile)."
+                }
+            ],
+            "level2": [
+                {
+                    "word": "violin",
+                    "type": "noun",
+                    "definition": "A stringed musical instrument of treble pitch, played with a horsehair bow."
+                },
+                {
+                    "word": "cling",
+                    "type": "verb",
+                    "definition": "To remain emotionally or intellectually attached."
+                },
+                {
+                    "word": "sling",
+                    "type": "noun",
+                    "definition": "A simple weapon consisting of a looped strap in which a projectile is whirled and then released."
+                }
+            ],
+            "level3": [
+                {
+                    "word": "fling",
+                    "type": "noun",
+                    "definition": "A short period of enjoyment or wild behavior."
+                }
+            ]
+        }
+    ]
+}
