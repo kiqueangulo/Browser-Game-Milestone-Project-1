@@ -6,13 +6,14 @@ async function start() {
     loadData(rhymes);
     
     function loadData(arr) {
-        shown.textContent = word; // User's guide word
+        shown.textContent = word.toUpperCase(); // User's guide word
 
         shuffle(arr);
         
         // Leaving a letter uncover'll be easier by separating each word
         let letters = [];
         for (let i = 0; i < rhymes.length; i++) {
+            rhymes[i].word.toUpperCase();
             letters.push(rhymes[i].word.split(''));
         };
         
@@ -23,7 +24,7 @@ async function start() {
             
             for (let j = 0; j < letters[i].length; j++) {
                 let span = document.createElement('span');
-                span.textContent = letters[i][j];
+                span.textContent = letters[i][j].toUpperCase();
                 divIn.appendChild(span);
             };
 
