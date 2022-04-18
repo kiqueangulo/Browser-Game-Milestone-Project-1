@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Name</title>
     <script src="https://kit.fontawesome.com/af9596bd1f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./game.css">
-    <script src="./functions.js"></script>
-    <script src="./start.js"></script>
-    <script src="/dom.js"></script>
+    <link rel="stylesheet" href="./game/game.css">
+    <script src="./game/functions.js"></script>
+    <script src="./game/start.js"></script>
+    <script src="./game/dom.js"></script>
 </head>
 <body onload="start();">
     <nav>
@@ -26,10 +26,14 @@
                 <span><i class="fa-solid fa-circle-info"></i></span>
             </div>
             <div id="user-input">
-                <input type="text" id="typed-input">
+                <input type="text" id="typed-input" placeholder="Test your rhymes" pattern="">
                 <button id="try-bttn">TRY</button>
             </div>
             <div id="lives">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-heart"></i>
             </div>
         </div>

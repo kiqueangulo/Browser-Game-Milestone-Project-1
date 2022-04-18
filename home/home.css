@@ -40,6 +40,7 @@ body{
     text-align: center;
     font-size: 2rem;
     font-family: 'Fredoka Ona', cursive;
+    text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
     padding: 1.5rem 2rem;
     color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -61,6 +62,7 @@ body{
     padding: 6px 0px;
     text-align: center;
     font-size: 1rem;
+    text-shadow: none;
 }
 .click:hover span::after {
     content:'';
