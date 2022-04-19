@@ -41,12 +41,13 @@ body{
     font-size: 2rem;
     font-family: 'Fredoka Ona', cursive;
     text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
-    padding: 1.5rem 2rem;
+    padding: 3% 8%;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     border: 5px solid hsl(0, 0%, 90%);
     background-color: hsl(204, 95%, 50%);
     cursor: pointer;
+    text-decoration: none;
 }
 .click span {
     display: none;
@@ -77,9 +78,6 @@ body{
     -webkit-transform:rotate(45deg);
     transform:rotate(45deg);
 }
-.play{
-    text-decoration: none;
-}
 .play span {
     top: -40px;
     left: 250px;
@@ -92,13 +90,13 @@ body{
     display: none;
     position: absolute;
     z-index: 1;
-    height: 30vh;
-    width: 28rem;
     border-radius: 25px;
     background-color: aliceblue;
     font-family: 'Fredoka Ona', cursive;
 }
 .word-selection p {
+    height: 30vh;
+    width: 28rem;
     padding: 0.4rem 0.8rem;
     text-align: right;
     color: #000;

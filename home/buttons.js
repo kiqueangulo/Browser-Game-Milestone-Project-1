@@ -4,9 +4,9 @@ async function showForm() {
 
     form.style.display = 'initial';
     
+    await addOption();
+    
     closeBttn.addEventListener('click', () => {
         form.style.display = 'none';
     });
-    
-    await addOption();
 };

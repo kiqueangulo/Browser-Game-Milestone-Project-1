@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+body {
+    font-family: 'Fredoka Ona', cursive;
+}
+nav {
+    min-height: 7vh;
+    margin-top: -16px;
+    background-color: hsl(33, 100%, 65%);
+    box-shadow: 0px 0px 20px 5px hsl(0, 0%, 0%);
+}
+ul {
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+li {
+    display: inline-block;
+}
+li, li a {
+    height: 6vh;
+    padding-top: 1rem;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
+}
+li a:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 77%);
+}
+li a i {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+#game-name {
+    width: fit-content;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 
+    2px 0px rgb(88, 88, 88),
+    -2px 0px rgb(88, 88, 88);
+    font-size: 1.4rem;
+    border-left: 3px solid aliceblue;
+    border-right: 3px solid aliceblue;
+}
+#container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: 40rem;
+    padding: 0rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    border: 10px solid hsl(204, 95%, 50%);
+    border-radius: 25px;
+    background-color: hsl(33, 100%, 65%);
+    box-shadow: 0px 0px 30px;
+}
+h2, h3, p {
+    text-align: center;
+    text-shadow: -0.5px -0.5px 0.5px hsl(0, 0%, 900%);
+}
+h3 {
+    padding-top: 0.5rem;
+    border-top: 2px dotted hsl(0, 0%, 0%);
+}
+#container p:last-child {
+    padding-top: 0.5rem;
+    border-top: 1px solid hsl(0, 0%, 0%);
+}
