@@ -88,6 +88,9 @@ body{
     top: 85px;
     left: 275px;
 }
+.pop-window {
+    display: none;
+}
 .instructions span {
     top: 212px;
     left: 335px;
