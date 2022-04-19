@@ -1,3 +1,4 @@
+// This loads the rhymes letter by letter
 function loadRhymes(arr) {
     let hiddenSide = document.querySelector('.hidden-side');
     

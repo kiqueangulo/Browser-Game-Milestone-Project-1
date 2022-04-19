@@ -1,7 +1,17 @@
 async function start() {
-    let [word, rhymes] = await randomData();
-    let shown = document.getElementById('word-shown');
-    
+    const shown = document.getElementById('word-shown');
+    let [word, rhymes] = [];
+
+    // Checking if the user chose a word or just clicked play (random word)
+    const param = new URLSearchParams(window.location.search);
+    const decider = param.get('word');
+
+    if (decider === 'random') {
+        [word, rhymes] = await randomData();
+    } else {
+        [word, rhymes] = await specificData(decider);
+    };
+
     loadData(rhymes);
     
     function loadData(arr) {

@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 body {
     font-family: 'Fredoka Ona', cursive;
@@ -61,6 +61,7 @@ li:nth-child(3):hover, li a:hover {
     flex-basis: 40vw;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    border-radius: 30px;
     display: flex;
     flex-flow: column nowrap;
     border: 1px solid black;
@@ -85,6 +86,7 @@ li:nth-child(3):hover, li a:hover {
     margin: 0% 10%;
     padding: 2rem 0rem;
     border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 25px;
 }
 #typed-input, #try-bttn {
     display: block;
@@ -105,11 +107,22 @@ li:nth-child(3):hover, li a:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    height: 10%;
 }
 #lives i {
-    margin: 0rem 0.2rem;
+    margin: 0rem 0.5rem;
+    padding: 0.4rem;
+    box-shadow: 0px 0px 10px 5px hsl(0, 0%, 0%);
+    border-radius: 10px;
+    color: hsl(0, 77%, 45%);
+    text-align: center;
+    font-size: 2rem;
 }
-
 .hidden-side {
     justify-content: space-between;
+}
+.rhyme-zone {
+    flex-grow: 1;
+    display: flex;
 }
