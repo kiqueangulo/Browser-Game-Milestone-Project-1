@@ -9,6 +9,8 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="./home/home.css">
+    <script src="./home/options.js"></script>
+    <script src="./home/buttons.js"></script>
 </head>
 <body>
     <div id="container">
@@ -16,8 +18,21 @@
             <a class="click play" href="./game.html?word=random">PLAY<span>Take a random word, if you dare!</span></a>
         </div>
         <div class="option-container two">
-            <p class="click words">WORDS
+            <p class="click words" onclick="addOption();">WORDS
                 <span>Choose a word to start with.</span>
+                <div class="pop-window word-selection">
+                    <p class="close-bttn">X</p>
+                    <form action="./game.html" method="get" id="form">
+                        <h2>CHOOSE YOUR WORD</h2>
+                        <div>
+                            <label for="word-options">WORD:</label>
+                            <select name="word" id="word-options">
+                                <option value="" hidden></option>
+                            </select>
+                        </div>
+                        <button>PLAY</button>
+                    </form>
+                </div>
             </p>
         </div>
         <div class="option-container two">
