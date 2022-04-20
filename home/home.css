@@ -37,17 +37,17 @@ body{
     flex-grow: 1;
 }
 .click {
+    padding: 3% 8%;
+    text-decoration: none;
     text-align: center;
     font-size: 2rem;
     font-family: 'Fredoka Ona', cursive;
     text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
-    padding: 3% 8%;
     color: rgb(255, 255, 255);
+    background-color: hsl(204, 95%, 50%);
     border-radius: 20px;
     border: 5px solid hsl(0, 0%, 90%);
-    background-color: hsl(204, 95%, 50%);
     cursor: pointer;
-    text-decoration: none;
 }
 .click span {
     display: none;
@@ -55,7 +55,7 @@ body{
 .click:hover span {
     display: block;
     position: absolute;
-    width:10rem;
+    width: 10rem;
     height: 4rem;
     border-radius: 10px;
     background-color:rgb(245, 245, 245);
