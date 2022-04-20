@@ -1,13 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+:root {
+    --bg-container: hsl(33, 100%, 65%);
+    --bd-container: hsl(204, 95%, 50%);
+    --font: 'Fredoka Ona', cursive;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
 }
 body{
     background-color: hsl(0, 0%, 82%);
+    background-image: url(./assets/background.webp);
+    background-size: 300%;
+    animation: bg-motion 25s infinite alternate;
+}
+@keyframes bg-motion {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+nav {
+    min-height: 7vh;
+    margin-top: -16px;
+    background-color: hsl(33, 100%, 65%);
+    box-shadow: 0px 0px 20px 0.5px hsl(0, 0%, 0%);
+}
+ul {
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+li {
+    list-style: none;
+    height: 6vh;
+    padding-top: 1rem;
+    font-family: var(--font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
+}
+#game-name {
+    width: fit-content;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 
+        2px 0px rgb(88, 88, 88),
+        -2px 0px rgb(88, 88, 88);
+    font-size: 1.4rem;
+    border-left: 3px solid aliceblue;
+    border-right: 3px solid aliceblue;
 }
 #container {
     position: absolute;
@@ -19,9 +70,9 @@ body{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    border: 10px solid hsl(204, 95%, 50%);
+    border: 10px solid var(--bd-container);
     border-radius: 25px;
-    background-color: hsl(33, 100%, 65%);
+    background-color: var(--bg-container);
     box-shadow: 0px 0px 30px;
 }
 .option-container {
@@ -41,10 +92,10 @@ body{
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
     text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
     color: rgb(255, 255, 255);
-    background-color: hsl(204, 95%, 50%);
+    background-color: var(--bd-container);
     border-radius: 20px;
     border: 5px solid hsl(0, 0%, 90%);
     cursor: pointer;
@@ -92,7 +143,7 @@ body{
     z-index: 1;
     border-radius: 25px;
     background-color: aliceblue;
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
 }
 .word-selection p {
     height: 30vh;
@@ -130,7 +181,7 @@ body{
     width: 60%;
     border-radius: 8px;
     text-align: center;
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
     font-size: 120%;
 }
 #form button {
@@ -140,7 +191,7 @@ body{
     border-radius: 8px;
     border: none;
     box-shadow: 0px 0px 4px hsl(0, 0%, 0%);
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
     font-size: 120%;
     cursor: pointer;
 }
@@ -156,4 +207,23 @@ body{
     border-radius: 50%;
     background-color: hsl(0, 0%, 100%);
     cursor: pointer;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--bg-container);
+    box-shadow: 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#credits p {
+    font-family: var(--font);
+    color: black;
+    text-shadow: -1px -1px 2px hsl(0, 0%, 100%);
+}
+#credits a {
+    color: black;
 }
