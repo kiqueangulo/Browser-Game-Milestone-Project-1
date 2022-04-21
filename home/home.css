@@ -14,17 +14,21 @@ body{
     background-color: hsl(0, 0%, 82%);
     background-image: url(./assets/background.webp);
     background-size: 300%;
-    animation: bg-motion 25s infinite alternate;
+    animation: bg-motion 30s infinite alternate;
 }
 @keyframes bg-motion {
     0% {
         background-position: left;
+    }
+    50% {
+        background-position: 45deg;
     }
     100% {
         background-position: right;
     }
 }
 nav {
+    width: 100vw;
     min-height: 7vh;
     margin-top: -16px;
     background-color: hsl(33, 100%, 65%);
@@ -137,7 +141,11 @@ li {
     top: 85px;
     left: 275px;
 }
-.pop-window {
+.instructions span {
+    top: 212px;
+    left: 335px;
+}
+.word-selection {
     display: none;
     position: absolute;
     z-index: 1;
@@ -174,6 +182,9 @@ li {
     justify-content: space-evenly;
     height: 3vh;
 }
+#set-level {
+    display: none;
+}
 #form div label {
     font-size: 150%;
 }
@@ -195,10 +206,6 @@ li {
     font-size: 120%;
     cursor: pointer;
 }
-.instructions span {
-    top: 212px;
-    left: 335px;
-}
 .icon {
     padding: 0.5rem 0.8rem;
     margin-top: 1rem;
@@ -216,14 +223,16 @@ footer {
     background-color: var(--bg-container);
     box-shadow: 0px 0px 20px;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
-#credits p {
+.credits p {
     font-family: var(--font);
+    text-align: center;
     color: black;
     text-shadow: -1px -1px 2px hsl(0, 0%, 100%);
 }
-#credits a {
+.credits a {
     color: black;
 }

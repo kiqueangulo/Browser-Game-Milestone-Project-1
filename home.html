@@ -20,16 +20,17 @@
     </nav>
     <div id="container">
         <div class="option-container one">
-            <a class="click play" href="./game.html?word=random">PLAY<span>Take a random word, if you dare!</span></a>
+            <a class="click play" href="./game.html?level=1&word=random">PLAY<span>Take a random word, if you dare!</span></a>
         </div>
         <div class="option-container two">
             <p class="click words" onclick="showForm();">WORDS
                 <span>Choose a word to start with.</span>
-                <div class="pop-window word-selection">
-                    <p class="close-bttn">X</p>
+                <div class="word-selection">
+                    <p class="close-bttn" onclick="closeWindow();">X</p>
                     <form action="./game.html" method="get" id="form">
                         <h2>CHOOSE YOUR WORD</h2>
                         <div>
+                            <input id="set-level" type="text" name="level" value="1">
                             <label for="word-options">WORD:</label>
                             <select name="word" id="word-options">
                                 <option value="" hidden></option>
@@ -46,13 +47,22 @@
             </a>
         </div>
         <div class="option-container three">
-            <i class="fa fa-volume icon"></i>
+            <i class="fa fa-volume icon" onclick="toggleMusic();"></i>
         </div>
     </div>
     <footer>
-        <div id="credits">
+        <div class="credits game">
             <p>This game was inspired by <b>Word Trip</b> ( <a href="https://play.google.com/store/apps/details?id=in.playsimple.wordtrip&hl=es_US&gl=US">Android</a> , <a href="https://apps.apple.com/us/app/word-trip-word-puzzles-games/id1214223596">iOS</a> )</p>
         </div>
+        <div class="credits music">
+            <p>
+                The Beginning (w Caturday) by Babasmas | https://soundcloud.com/babasmasmoosic, 
+                Music promoted by https://www.chosic.com/free-music/all/, 
+                Creative Commons CC BY-SA 3.0, 
+                https://creativecommons.org/licenses/by-sa/3.0/
+            </p>
+        </div>
     </footer>
+    <audio src="./home/assets/background-music.mp3" autoplay loop muted></audio>
 </body>
 </html>

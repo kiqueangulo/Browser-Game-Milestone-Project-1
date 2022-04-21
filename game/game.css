@@ -1,20 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+:root {
+    --bg-container: hsl(33, 100%, 65%);
+    --bd-container: hsl(204, 95%, 50%);
+    --font: 'Fredoka Ona', cursive;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
 }
 body {
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
     display: flex;
     flex-flow: column wrap;
+    background-color: hsl(0, 0%, 82%);
+    background-image: url(../home/assets/background.webp);
+    background-size: 300%;
+    animation: bg-motion 40s infinite alternate;
+}
+@keyframes bg-motion {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: 45deg;
+    }
+    100% {
+        background-position: right;
+    }
 }
 nav {
     display: flex;
     min-height: 7vh;
-    background-color: hsl(33, 100%, 65%);
+    background-color: var(--bg-container);
     box-shadow: 0px 0px 20px 1px hsl(0, 0%, 0%);
 }
 ul {
@@ -30,7 +49,7 @@ li, li a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
-    color: aliceblue;
+    color: hsl(208, 100%, 97%);
     text-shadow: -1px -1px 2px hsl(0, 0%, 0%);
 }
 li:nth-child(3):hover, li a:hover {
@@ -39,11 +58,11 @@ li:nth-child(3):hover, li a:hover {
 }
 #level {
     font-size: 1.4rem;
-    border-left: 3px solid aliceblue;
-    border-right: 3px solid aliceblue;
+    border-left: 3px solid hsl(208, 100%, 97%);
+    border-right: 3px solid hsl(208, 100%, 97%);
     box-shadow: 
-    2px 0px rgb(88, 88, 88),
-    -2px 0px rgb(88, 88, 88);
+    2px 0px hsl(0, 0%, 35%),
+    -2px 0px hsl(0, 0%, 35%);
     padding: 0rem 1.5rem;
 }
 #level span {
@@ -63,9 +82,9 @@ li:nth-child(3):hover, li a:hover {
     margin-bottom: 1rem;
     display: flex;
     flex-flow: column nowrap;
-    background-color: #ffaf4d;
+    background-color: var(--bg-container);
     border-radius: 30px;
-    border: 10px solid hsl(204, 95%, 50%);
+    border: 10px solid var(--bd-container);
     box-shadow: 0px 0px 30px;
 }
 .input-side {
@@ -78,6 +97,8 @@ li:nth-child(3):hover, li a:hover {
 #word-shown {
     text-align: center;
     font-size: 3rem;
+    color: hsl(0, 0%, 0%);
+    text-shadow: -3px 2px 1px hsl(0, 0%, 100%);
 }
 #word-info div {
     padding-top: 0.5rem;
@@ -86,16 +107,20 @@ li:nth-child(3):hover, li a:hover {
     text-align: center;
     font-size: 1.7rem;
 }
-.pop-up span {
+#word-info i {
+    text-shadow: -2px 2px 1px hsl(0, 0%, 100%);
+}
+#window {
     display: none;
 }
-.pop-up:hover span {
+.pop-up:hover #window {
     display: block;
     position: absolute;
+    z-index: 1;
     width: 20rem;
     height: 6rem;
     padding: 10px 0px;
-    background-color:rgb(245, 245, 245);
+    background-color:hsl(0, 0%, 96%);
     border-radius: 10px;
     color:#000;
     text-align: center;
@@ -105,7 +130,7 @@ li:nth-child(3):hover, li a:hover {
 #user-input {
     margin: 0% 10%;
     padding: 2rem 0rem;
-    background-color: hsl(204, 95%, 50%);
+    background-color: var(--bd-container);
     border: 5px solid hsl(0, 0%, 90%);
     border-radius: 25px;
     box-shadow: 0px 0px 15px 0.5px;
@@ -116,7 +141,7 @@ li:nth-child(3):hover, li a:hover {
     margin: auto;
     border: none;
     border-radius: 10px;
-    font-family: 'Fredoka Ona', cursive;
+    font-family: var(--font);
     font-size: 1.5rem;
 }
 #typed-input {
@@ -125,6 +150,7 @@ li:nth-child(3):hover, li a:hover {
 }
 #try-bttn {
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 #lives {
     display: flex;
@@ -136,7 +162,7 @@ li:nth-child(3):hover, li a:hover {
 #lives i {
     margin: 0rem 0.5rem;
     padding: 0.4rem;
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     box-shadow: 0px 0px 10px 1px hsl(0, 0%, 0%);
     border-radius: 10px;
     color: hsl(0, 77%, 45%);
@@ -159,32 +185,46 @@ li:nth-child(3):hover, li a:hover {
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 1px whitesmoke;
+    box-shadow: 0px 0px 10px 1px hsl(0, 0%, 96%);
     align-items: center;
 }
-.rhyme-section span {
+.hidden-letter {
     flex-grow: 1;
     height: 8vh;
     padding-top: 3%;
     text-align: center;
     font-size: 200%;
-    background-color: #0698f9;
+    background-color: var(--bd-container);
     border: none;
-    color: #0698f9;
-    
+    color: var(--bd-container);
+    transition: all 2s;
 }
-.rhyme-section span:nth-child(2) {
-    color: black;
-    background-color: white;
-}
-.rhyme-section span:first-child {
+.hidden-letter:nth-child(2) {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-.rhyme-section span:last-child {
+.hidden-letter:last-child {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-.rhyme-section span:nth-child(n + 2):nth-child(-n + 4) {
-    box-shadow: 1px 0px 10px 1px whitesmoke;
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--bg-container);
+    box-shadow: 0px 0px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.credits p {
+    font-family: var(--font);
+    text-align: center;
+    color: black;
+    text-shadow: -1px -1px 2px hsl(0, 0%, 100%);
+}
+.credits a {
+    color: black;
 }

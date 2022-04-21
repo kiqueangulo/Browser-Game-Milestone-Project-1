@@ -1,31 +1,32 @@
 async function start() {
-    const shown = document.getElementById('word-shown');
+    let shown = document.getElementById('word-shown');
     let [word, rhymes] = [];
 
     // Checking if the user chose a word or just clicked play (random word)
-    const param = new URLSearchParams(window.location.search);
-    const decider = param.get('word');
+    const queries = urlQueries();
 
-    if (decider === 'random') {
-        [word, rhymes] = await randomData();
+    if (queries[1] === 'random') {
+        [word, rhymes] = await randomData(queries[0]);
     } else {
-        [word, rhymes] = await specificData(decider);
+        [word, rhymes] = await specificData(queries[0], queries[1]);
     };
 
-    loadData(rhymes);
-    
-    function loadData(arr) {
-        shown.textContent = word.toUpperCase(); // User's guide word
+    loadData(word, rhymes, shown);
+};
 
-        shuffle(arr);
-        
-        // Leaving a letter uncover'll be easier by separating each word
-        let letters = [];
-        for (let i = 0; i < rhymes.length; i++) {
-            rhymes[i].word.toUpperCase();
-            letters.push(rhymes[i].word.split(''));
+// Check if user attemp matches the options
+function checkRhyme() {
+    let queries = urlQueries();
+
+    let divIn = document.querySelectorAll('.rhyme-section');
+    divIn.forEach(elem => {
+        for (let i = 0; i < elem.classList.length; i++) {
+            if (queries[2].toLowerCase() === elem.classList[1]) {
+                revealWord(queries[2]);
+            };
         };
-        
-        loadRhymes(letters);
-    };
+    });    
+
+    // removeContent();
+    // await start();
 };
