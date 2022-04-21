@@ -1,15 +1,3 @@
-// Loads the initial conditions to play
-function loadData(str, arr, elem) {
-    elem.textContent = str.toUpperCase(); // User's guide word
-
-    shuffle(arr);
-    
-    // Leaving a letter uncover'll be easier by separating each word
-    let letters = separate(arr);
-    
-    loadRhymes(arr, letters);
-};
-
 // This loads the rhymes letter by letter
 function loadRhymes(Array, arr) {
     let hiddenSide = document.querySelector('.hidden-side');

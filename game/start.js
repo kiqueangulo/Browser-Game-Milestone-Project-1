@@ -16,17 +16,22 @@ async function start() {
 
 // Check if user attemp matches the options
 function checkRhyme() {
-    let queries = urlQueries();
-
     let divIn = document.querySelectorAll('.rhyme-section');
-    divIn.forEach(elem => {
-        for (let i = 0; i < elem.classList.length; i++) {
-            if (queries[2].toLowerCase() === elem.classList[1]) {
-                revealWord(queries[2]);
-            };
-        };
-    });    
+    let queries = urlQueries();
+    let [correct, lives] = [localStorage.getItem('correct'), localStorage.getItem('lives')];
+    let count = correct;
 
-    // removeContent();
-    // await start();
+    for (let i = 0; i < divIn.length; i++) {
+        if (queries[2].toLowerCase() === divIn[i].classList[1]) {
+            revealWord(queries[2]);
+            correct++;
+            updateCorrect(correct);
+        };
+    };
+
+    if (count == correct) {
+        // Code to crack/remove hearts >here<
+        lives--
+        updateLives(lives);
+    };
 };

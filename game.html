@@ -7,6 +7,7 @@
     <title>Game Name</title>
     <script src="https://kit.fontawesome.com/af9596bd1f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./game/game.css">
+    <script src="./game/trackingUser.js"></script>
     <script src="./game/functions.js"></script>
     <script src="./game/start.js"></script>
     <script src="./game/dom.js"></script>
@@ -30,7 +31,7 @@
                 </div>
             </div>
             <div id="user-input">
-                <input type="text" id="typed-input" name="attemp" placeholder="Test your rhymes" pattern="/^[a-zA-Z]$/" onblur="urlQueries();">
+                <input type="text" id="typed-input" name="attemp" placeholder="only lower case, no spaces" pattern="/^[a-zA-Z]$/" onblur="urlQueries();">
                 <button id="try-bttn" onclick="checkRhyme();">TRY</button>
             </div>
             <div id="lives">

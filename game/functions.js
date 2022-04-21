@@ -1,18 +1,3 @@
-// Gets the url queries in an array [level, guide word, user attemp]
-function urlQueries() {
-    let queries = [];
-    let attemp = document.getElementById('typed-input');
-    const link = new URLSearchParams(window.location.search);
-    
-    link.append('attemp', attemp.value);
-
-    link.forEach(query => {
-        queries.push(query);
-    });
-
-    return queries;
-};
-
 // When the player just hit PLAY
 async function randomData(level) {
     let response = await fetch('dataBase.json').then(obj => obj.json());
@@ -38,6 +23,18 @@ async function specificData(level, par) {
     };
 
     return [word, rhymes];
+};
+
+// Loads the initial conditions to play
+function loadData(str, arr, elem) {
+    elem.textContent = str.toUpperCase(); // User's guide word
+
+    shuffle(arr);
+    
+    // Leaving a letter uncover'll be easier by separating each word
+    let letters = separate(arr);
+    
+    loadRhymes(arr, letters);
 };
 
 // Randomize the array with the Fisher-Yates Shuffle, so the words are not loaded in the same order everytime
