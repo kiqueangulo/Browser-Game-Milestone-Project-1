@@ -13,6 +13,30 @@ function urlQueries() {
     return queries;
 };
 
+// If the user input matches any rhyme option
+function ifCorrect(word, counter, elementArray) {
+    for (let i = 0; i < elementArray.length; i++) {
+        if (word.toLowerCase() === elementArray[i].classList[1]) {
+            revealWord(word);
+            counter++;
+            updateCorrect(counter);
+        };
+    };
+
+    return counter;
+};
+
+// If the user makes an incorrect input
+function ifWrong(param, comparer, counter) {
+    if (param === comparer) {
+        demageHearts(counter);
+        counter--;
+        updateLives(counter);
+    };
+
+    return counter;
+};
+
 /* These two functions keep track of fails and successful attemps */
 function updateCorrect(correct) {
     window.localStorage.setItem('correct', correct);

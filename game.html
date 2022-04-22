@@ -30,13 +30,8 @@
                 <input type="text" id="typed-input" name="attemp" placeholder="only lower case, no spaces" pattern="/^[a-zA-Z]$/" onblur="urlQueries();">
                 <button id="try-bttn" onclick="checkRhyme();">TRY</button>
             </div>
-            <div id="lives">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-heart"></i>
-            </div>
+            <!-- I had to placed the code of the icons w/o spaces so the demageHearts function works properly -->
+            <div id="lives"><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i></div>
         </div>
         <div class="container hidden-side"></div>
     </div>
@@ -54,8 +49,8 @@
         </div>
     </footer>
     <script src="./game/trackingUser.js"></script>
-    <script src="./game/functions.js"></script>
-    <script src="./game/start.js"></script>
     <script src="./game/dom.js"></script>
+    <script src="./game/functions.js"></script>
+    <script src="./game/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,11 @@
+// Type and definition of the guide word
+function loadWordInfo(arr) {
+    let defWindow = document.getElementById('window');
+    defWindow.innerHTML = 
+        `Definition: // <i>${arr[0]}</i> //<br>
+        ${arr[1]}`;
+};
+
 // This loads the rhymes letter by letter
 function loadRhymes(Array, arr) {
     let hiddenSide = document.querySelector('.hidden-side');
@@ -10,7 +18,7 @@ function loadRhymes(Array, arr) {
         let divIn = document.createElement('div');
         divIn.setAttribute('class', `rhyme-section ${Array[i].word} pop-up`);
 
-        createPopUp(divIn);
+        createPopUp(Array, i, divIn);
 
         loadByLetters(Array, arr, i, divIn);
 
@@ -20,9 +28,13 @@ function loadRhymes(Array, arr) {
 };
 
 // Window for the information of the hidden rhymes
-function createPopUp(elem) {
+function createPopUp(Array, index, elem) {
     let popWindow = document.createElement('span');
     popWindow.setAttribute('id', 'window');
+    popWindow.innerHTML = 
+        `Definition: // <i>${Array[index].type}</i> //<br>
+        ${Array[index].definition}`;
+
     elem.appendChild(popWindow);
 };
 
@@ -55,14 +67,27 @@ function revealWord(word) {
 };
 
 // Removes or cracks up the hearts with wrong inputs
-function demagHearts(failures) {
-    const heart = document.querySelector('#lives').childNodes[1];
+function demageHearts(failures) {
+    const heart = document.querySelector('#lives').childNodes[0];
     
-    if (failures % 2 == 0) {
+    if (failures % 2 === 0) {
+        makeEmphasis(heart);
         heart.className = 'fa-solid fa-heart-crack';
     } else {
         heart.remove();
     };
+};
+
+// Animates when a heart cracks up
+function makeEmphasis(elemto) {
+    setTimeout(() => {
+        elemto.style.fontSize = '2.5rem';
+        elemto.style.transform = 'rotate(45deg)';
+    }, 50);
+    setTimeout(() => {
+        elemto.style.fontSize = '2rem';
+        elemto.style.transform = 'rotate(0deg)';
+    }, 300);
 };
 
 // Delete current content to have an updated display

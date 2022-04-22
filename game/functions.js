@@ -4,30 +4,35 @@ async function randomData(level) {
     let data = response.words[Math.floor(Math.random() * response.words.length)];
 
     let word = data.word;
+    let wordInfo = [data.type, data.definition];
     let rhymes = data.levels[level - 1];
     
-    return [word, rhymes];
+    return [word, wordInfo, rhymes];
 };
 
 // If the player chooses a specific word
 async function specificData(level, par) {
     let word;
+    let wordInfo = [];
     let rhymes = [];
     let response = await fetch('dataBase.json').then(obj => obj.json());
 
     for (let i = 0; i < response.words.length; i++) {
         if (response.words[i].word === par) {
             word = response.words[i].word;
+            wordInfo = [response.words[i].type, response.words[i].definition];
             rhymes = response.words[i].levels[level - 1];
         };
     };
 
-    return [word, rhymes];
+    return [word, wordInfo, rhymes];
 };
 
 // Loads the initial conditions to play
-function loadData(str, arr, elem) {
+function loadData(str, strInfo, arr, elem) {
     elem.textContent = str.toUpperCase(); // User's guide word
+    
+    loadWordInfo(strInfo);
 
     shuffle(arr);
     
