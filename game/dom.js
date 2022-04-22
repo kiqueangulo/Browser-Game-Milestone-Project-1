@@ -89,8 +89,3 @@ function makeEmphasis(elemto) {
         elemto.style.transform = 'rotate(0deg)';
     }, 300);
 };
-
-// Loads hearts when the user tries again
-function loadHHearts() {
-    window.localStorage.setItem('lives', 10);
-};
