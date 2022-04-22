@@ -65,27 +65,3 @@ function revealWord(word) {
         letter.style.color = 'black';
     });
 };
-
-// Removes or cracks up the hearts with wrong inputs
-function demageHearts(failures) {
-    const heart = document.querySelector('#lives').childNodes[0];
-    
-    if (failures % 2 === 0) {
-        makeEmphasis(heart);
-        heart.className = 'fa-solid fa-heart-crack';
-    } else {
-        heart.remove();
-    };
-};
-
-// Animates when a heart cracks up
-function makeEmphasis(elemto) {
-    setTimeout(() => {
-        elemto.style.fontSize = '2.5rem';
-        elemto.style.transform = 'rotate(45deg)';
-    }, 50);
-    setTimeout(() => {
-        elemto.style.fontSize = '2rem';
-        elemto.style.transform = 'rotate(0deg)';
-    }, 300);
-};

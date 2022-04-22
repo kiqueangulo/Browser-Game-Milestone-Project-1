@@ -160,6 +160,7 @@ li:nth-child(3):hover, li a:hover {
     justify-content: center;
     align-items: center;
     height: 10%;
+    font-size: 2rem;
 }
 #lives i {
     margin: 0rem 0.5rem;
@@ -169,7 +170,6 @@ li:nth-child(3):hover, li a:hover {
     border-radius: 10px;
     color: hsl(0, 77%, 45%);
     text-align: center;
-    font-size: 2rem;
 }
 .hidden-side {
     justify-content: center;

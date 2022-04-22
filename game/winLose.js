@@ -1,4 +1,4 @@
-// when the user has no more lives
+// If the user wins or loses
 function showWindow(decider) {
     let deciderWindow;
 
@@ -12,7 +12,7 @@ function showWindow(decider) {
     deciderWindow.style.display = 'flex';
 };
 
-// Start over the same level
+// Start over the same word
 function tryAgain() {
     let deciderWindow = document.querySelector('.level-failed');
 
@@ -20,6 +20,7 @@ function tryAgain() {
     restartTracker();
     removeContent();
     removeBlur();
+    loadHearts();
     start();
 };
 

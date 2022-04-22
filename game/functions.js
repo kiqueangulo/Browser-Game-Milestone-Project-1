@@ -33,6 +33,7 @@ function loadData(str, strInfo, arr, elem) {
     elem.textContent = str.toUpperCase(); // User's guide word
     
     loadWordInfo(strInfo);
+    loadHearts();
 
     shuffle(arr);
     
