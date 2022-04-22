@@ -26,11 +26,9 @@ function checkRhyme() {
     lives = ifWrong(count, correct, lives);   // If the attemp failed, count and correct will stay equal. Thus, lives will update
 
     if (lives === 0) {
-        // Show window saying "Go Home" or "Try Again"
-        console.log('wasted');
+        showWindow(lives);
     };
     if (correct === divIn.length) {
-        // Show window with button to load next level
-        console.log('que chuleria');
+        showWindow(correct);
     };
 };

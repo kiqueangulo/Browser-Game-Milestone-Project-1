@@ -19,12 +19,12 @@ function toggleMusic() {
 
     if (!audio.muted) {
         audio.muted = true;
-        // audio.pause(); --They don't work
         speaker.className = 'fa fa-volume-slash icon';
+        // audio.pause(); --They don't work
     } else {
         audio.muted = false;
-        // audio.play();
         speaker.className = 'fa fa-volume icon';
+        // audio.play();
     };
 
     /* Example:

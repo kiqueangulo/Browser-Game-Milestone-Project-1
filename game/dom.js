@@ -90,11 +90,7 @@ function makeEmphasis(elemto) {
     }, 300);
 };
 
-// Delete current content to have an updated display
-function removeContent() {
-    let divOut = document.querySelectorAll('.rhyme-zone');
-    
-    divOut.forEach(container => {
-        container.remove();
-    });
+// Loads hearts when the user tries again
+function loadHHearts() {
+    window.localStorage.setItem('lives', 10);
 };

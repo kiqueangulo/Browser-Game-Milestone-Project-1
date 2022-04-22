@@ -13,6 +13,12 @@ function urlQueries() {
     return queries;
 };
 
+// When the user loses and wants to try again
+function restartTracker() {
+    window.localStorage.setItem('correct', 0);
+    window.localStorage.setItem('lives', 10);
+};
+
 // If the user input matches any rhyme option
 function ifCorrect(word, counter, elementArray) {
     for (let i = 0; i < elementArray.length; i++) {
@@ -44,4 +50,9 @@ function updateCorrect(correct) {
 
 function updateLives(lives) {
     window.localStorage.setItem('lives', lives);
+};
+
+// Delete the count of attemps (correct) and fails (lives)
+window.onbeforeunload = () => {
+    window.localStorage.clear();
 };

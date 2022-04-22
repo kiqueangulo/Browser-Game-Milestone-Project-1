@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="./game/game.css">
 </head>
 <body onload="start();">
-    <nav>
+    <nav class="blur">
         <ul>
             <li><a href="./home.html">HOME</a></li>
             <li id="level"><span>LEVEL 1:</span>YOU GOT IT B!</li>
             <li>STATS</li>
         </ul>
     </nav>
-    <div id="play-zone">
+    <div id="play-zone" class="blur">
         <div class="container input-side">
             <div id="word-info">
                 <p id="word-shown">WORD</p>
@@ -35,7 +35,21 @@
         </div>
         <div class="container hidden-side"></div>
     </div>
-    <footer>
+    <div class="pop-window level-failed">
+        <h2>Looks like it's too much for you <i class="fa-solid fa-face-grin-tears"></i></h2>
+        <div>
+            <button class="bttn-decider first-bttn try-again" onclick="tryAgain();">TRY AGAIN</button>
+            <button class="bttn-decider go-home"><a href="./home.html">HOME</a></button>
+        </div>
+    </div>
+    <div class="pop-window level-completed">
+        <h2>YOU NAILED IT!<i class="fa-solid fa-child-reaching"></i></h2>
+        <div>
+            <button class="bttn-decider first-bttn next-level">NEXT LEVEL</button>
+            <button class="bttn-decider go-home"><a href="./home.html">HOME</a></button>
+        </div>
+    </div>
+    <footer class="blur">
         <div class="credits game">
             <p>This game was inspired by <b>Word Trip</b> ( <a href="https://play.google.com/store/apps/details?id=in.playsimple.wordtrip&hl=es_US&gl=US">Android</a> , <a href="https://apps.apple.com/us/app/word-trip-word-puzzles-games/id1214223596">iOS</a> )</p>
         </div>
@@ -49,8 +63,9 @@
         </div>
     </footer>
     <script src="./game/trackingUser.js"></script>
-    <script src="./game/dom.js"></script>
     <script src="./game/functions.js"></script>
+    <script src="./game/winLose.js"></script>
+    <script src="./game/dom.js"></script>
     <script src="./game/main.js"></script>
 </body>
 </html>
