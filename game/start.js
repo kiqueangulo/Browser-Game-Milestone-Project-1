@@ -30,7 +30,7 @@ function checkRhyme() {
     };
 
     if (count == correct) {
-        // Code to crack/remove hearts >here<
+        demagHearts(lives);
         lives--
         updateLives(lives);
     };

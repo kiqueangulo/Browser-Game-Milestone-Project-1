@@ -54,6 +54,17 @@ function revealWord(word) {
     });
 };
 
+// Removes or cracks up the hearts with wrong inputs
+function demagHearts(failures) {
+    const heart = document.querySelector('#lives').childNodes[1];
+    
+    if (failures % 2 == 0) {
+        heart.className = 'fa-solid fa-heart-crack';
+    } else {
+        heart.remove();
+    };
+};
+
 // Delete current content to have an updated display
 function removeContent() {
     let divOut = document.querySelectorAll('.rhyme-zone');
