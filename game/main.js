@@ -11,7 +11,7 @@ async function start() {
         [word, wordInfo, rhymes] = await specificData(queries[0], queries[1]);
     };
     
-    loadData(word, wordInfo, rhymes, shown);
+    loadData(queries[0], word, wordInfo, rhymes, shown);
 };
 
 // Check if user attemp matches the options

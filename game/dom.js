@@ -1,3 +1,16 @@
+// Shows current level on nav bar
+function showLevel(level) {
+    let levelSection = document.getElementById('level');
+
+    if (level == 1) {
+        levelSection.innerHTML = `<span>LEVEL ${level}:</span>YOU GOT IT DUDE!`;
+    } else if (level == 2) {
+        levelSection.innerHTML = `<span>LEVEL ${level}:</span>ARE YOU SURE?`;
+    } else {
+        levelSection.innerHTML = `<span>LEVEL ${level}:</span>WHY EVEN TRY?`;
+    };
+};
+
 // Type and definition of the guide word
 function loadWordInfo(arr) {
     let defWindow = document.getElementById('window');

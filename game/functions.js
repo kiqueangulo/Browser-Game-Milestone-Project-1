@@ -29,11 +29,13 @@ async function specificData(level, par) {
 };
 
 // Loads the initial conditions to play
-function loadData(str, strInfo, arr, elem) {
+function loadData(level, str, strInfo, arr, elem) {
+    showLevel(level)
+
     elem.textContent = str.toUpperCase(); // User's guide word
     
     loadWordInfo(strInfo);
-    
+
     loadHearts();
 
     shuffle(arr);
