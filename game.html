@@ -19,7 +19,7 @@
     <div id="play-zone" class="blur">
         <div class="container input-side">
             <div id="word-info">
-                <p id="word-shown">WORD</p>
+                <p id="word-shown"></p>
                 <div>
                     <i class="fa-solid fa-circle-info pop-up">
                         <span id="window"></span>
@@ -45,7 +45,14 @@
     <div class="pop-window level-completed">
         <h2>YOU NAILED IT!<i class="fa-solid fa-child-reaching"></i></h2>
         <div>
-            <button class="bttn-decider first-bttn next-level">NEXT LEVEL</button>
+            <button class="bttn-decider first-bttn next-level" onclick="nextLevel();">NEXT LEVEL</button>
+            <button class="bttn-decider go-home"><a href="./home.html">HOME</a></button>
+        </div>
+    </div>
+    <div class="pop-window word-completed">
+        <h2>Today this game, tomorrow the world!<i class="fa-solid fa-earth-americas"></i></h2>
+        <div>
+            <h3>Congratulations! You can choose to play with another word at the home page.</h3>
             <button class="bttn-decider go-home"><a href="./home.html">HOME</a></button>
         </div>
     </div>

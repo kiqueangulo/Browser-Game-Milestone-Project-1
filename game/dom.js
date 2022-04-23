@@ -65,3 +65,9 @@ function revealWord(word) {
         letter.style.color = 'black';
     });
 };
+
+// Gets the current guide word to use it through the level
+function guideWord() {
+    let word = document.querySelector('#word-shown');
+    return word.textContent.toLowerCase();
+};

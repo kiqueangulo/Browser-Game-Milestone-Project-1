@@ -13,6 +13,15 @@ function urlQueries() {
     return queries;
 };
 
+// If the user comlpletes a level and go to the next one
+function nextLevel() {
+    const link = new URLSearchParams(window.location.search);
+    let level = Number(link.get('level'));
+    link.set('level', `${level + 1}`);
+    link.set('word', `${guideWord()}`);
+    window.location.search = link.toString();
+};
+
 // When the user loses and wants to try again
 function restartTracker() {
     window.localStorage.setItem('correct', 0);

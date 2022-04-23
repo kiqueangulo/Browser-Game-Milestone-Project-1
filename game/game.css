@@ -160,7 +160,6 @@ li:nth-child(3):hover, li a:hover {
     justify-content: center;
     align-items: center;
     height: 10%;
-    font-size: 2rem;
 }
 #lives i {
     margin: 0rem 0.5rem;
@@ -170,6 +169,7 @@ li:nth-child(3):hover, li a:hover {
     border-radius: 10px;
     color: hsl(0, 77%, 45%);
     text-align: center;
+    font-size: 2rem;
 }
 .hidden-side {
     justify-content: center;
@@ -265,10 +265,18 @@ li:nth-child(3):hover, li a:hover {
 .first-bttn {
     padding: 0.5rem 0rem;
 }
+.pop-window h3 {
+    margin: 0rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
 .level-failed {
     display: none;
 }
 .level-completed {
+    display: none;
+}
+.word-completed {
     display: none;
 }
 footer {

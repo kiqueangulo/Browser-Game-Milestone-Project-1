@@ -20,7 +20,6 @@ function tryAgain() {
     restartTracker();
     removeContent();
     removeBlur();
-    loadHearts();
     start();
 };
 
@@ -48,4 +47,8 @@ function removeBlur() {
     background.forEach(section => {
         section.style.filter = 'blur()';
     });
+};
+
+function levelComleted(level) {
+    
 };
