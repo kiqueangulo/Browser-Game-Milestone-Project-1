@@ -28,7 +28,9 @@ function checkRhyme() {
     if (lives === 0) {
         showWindow(lives);
     };
-    if (correct === divIn.length) {
+    if (correct === divIn.length && queries[0] ==  3) {
+        levelComleted();
+    } else if (correct === divIn.length) {
         showWindow(correct);
     };
 };

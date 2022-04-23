@@ -15,7 +15,7 @@ function loadHearts() {
         crackedicon.setAttribute('class', 'fa-solid fa-heart-crack')
         container.appendChild(crackedicon);
 
-        for (let i = 0; i < lives - 1; i++){
+        for (let i = 0; i < (lives - 1) / 2; i++){
             let icon = document.createElement('i');
             icon.setAttribute('class', 'fa-solid fa-heart');
     

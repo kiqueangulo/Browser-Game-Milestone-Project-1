@@ -20,6 +20,8 @@ function nextLevel() {
     link.set('level', `${level + 1}`);
     link.set('word', `${guideWord()}`);
     window.location.search = link.toString();
+
+    window.localStorage.setItem('correct', 0);
 };
 
 // When the user loses and wants to try again
@@ -62,6 +64,9 @@ function updateLives(lives) {
 };
 
 // Delete the count of attemps (correct) and fails (lives)
-window.onbeforeunload = () => {
-    window.localStorage.clear();
-};
+const homeBttn = document.querySelectorAll('.go-home');
+homeBttn.forEach(bttn => {
+    bttn.addEventListener('click', () => {
+        window.localStorage.clear();
+    });
+});

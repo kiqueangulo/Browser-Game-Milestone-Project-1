@@ -49,6 +49,10 @@ function removeBlur() {
     });
 };
 
-function levelComleted(level) {
-    
+// When the user completes the third level of a word
+function levelComleted() {
+    let finalWindow = document.querySelector('.word-completed');
+
+    makeBlur();
+    finalWindow.style.display = 'flex';
 };
