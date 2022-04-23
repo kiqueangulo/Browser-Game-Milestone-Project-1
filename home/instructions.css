@@ -12,6 +12,17 @@ body {
     background-size: 300%;
     animation: bg-motion 30s infinite alternate;
 }
+@keyframes bg-motion {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: 45deg;
+    }
+    100% {
+        background-position: right;
+    }
+}
 nav {
     min-height: 7vh;
     margin-top: -16px;

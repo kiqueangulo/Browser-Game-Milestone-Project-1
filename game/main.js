@@ -14,7 +14,7 @@ async function start() {
     loadData(queries[0], word, wordInfo, rhymes, shown);
 };
 
-// Check if user attemp matches the options
+// Check if user attemp matches the options and losed or passed the level
 function checkRhyme() {
     let divIn = document.querySelectorAll('.rhyme-section');
     let queries = urlQueries();

@@ -26,9 +26,4 @@ function toggleMusic() {
         speaker.className = 'fa fa-volume icon';
         // audio.play();
     };
-
-    /* Example:
-    let audio = document.getElementsByTagName('audio'); 
-    audio[0].removeAttribute('muted');
-    */
 };
